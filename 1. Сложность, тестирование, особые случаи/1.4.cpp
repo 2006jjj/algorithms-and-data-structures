@@ -24,18 +24,18 @@ cout << "Введите N, i, j:"<<endl;
 cin >> N >> i >> j;
 if (i < j)
 {
-	//a = i + abs(j - N) - 1;
-	a = N - abs(i-j)-1;
-	cout << "a=" << a<<endl;
-}
+  //a = i + abs(j - N) - 1;
+  a = N - abs(i-j)-1;
+  cout << "a=" << a<<endl;}
 else
 {
-	//a = j + abs(i - N) - 1;
-	a = N - abs(j - i) - 1;
-	cout << "a=" << a << endl;
+  //a = j + abs(i - N) - 1;
+  a = N - abs(j - i) - 1;
+  cout << "a=" << a << endl;
 }
 b = abs(i - j) - 1;
 cout << "b=" << b << endl;
 (a < b) ? cout << "\notvet:" << a : cout << "\notvet:" << b << endl;
+ 
 cout << endl; system("pause"); return 0;
 }

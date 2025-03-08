@@ -63,7 +63,7 @@ do
       cout << i << endl;
   }
   cout << "Еще раз? (y/n):";
-	cin >> ch;
+  cin >> ch;
 } while (ch!='n');
 
 cout << endl; system("pause"); return 0;

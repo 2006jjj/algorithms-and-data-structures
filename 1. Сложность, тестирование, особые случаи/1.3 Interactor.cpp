@@ -30,36 +30,41 @@ int main()
 {setlocale(LC_ALL, ".1251"); system("color 0F"); srand(time(NULL));
 
 int r, i, c;
+char ch;
 cout << "Код завершения ошибки (от -128 до 127)\nВердикт интерактора (от 0 до 7)\nВердикт чекера (от 0 до 7)\nВведите ваши значения:"<<endl;
 cin >> r >> i >> c;
-
-if (r > 127 || r < -128 || i > 7 || i < 0 || c > 7 || c < 0)
-  cout << "Error" << endl; 
-else
+do
 {
-  if (i == 0 )
+  if (r > 127 || r < -128 || i > 7 || i < 0 || c > 7 || c < 0)
+    cout << "Error" << endl; 
+  else
   {
-    if (r != 0)  
-      cout << 3 << endl;
-    else 
+    if (i == 0 )
+    {
+      if (r != 0)  
+        cout << 3 << endl;
+      else 
+        cout << c << endl;
+    }
+    else if (i == 1) 
       cout << c << endl;
-  }
-  else if (i == 1) 
-    cout << c << endl;
-  else if (i == 4)
-  {
-    if (r != 0) 
-      cout << 3 << endl;
+    else if (i == 4)
+    {
+      if (r != 0) 
+        cout << 3 << endl;
+      else 
+        cout << 4 << endl;
+    }
+    else if (i == 6) 
+      cout << 0 << endl;
+    else if (i == 7) 
+      cout << 1 << endl;
     else 
-      cout << 4 << endl;
+      cout << i << endl;
   }
-  else if (i == 6) 
-    cout << 0 << endl;
-  else if (i == 7) 
-    cout << 1 << endl;
-  else 
-    cout << i << endl;
-}
+  cout << "Еще раз? (y/n):";
+	cin >> ch;
+} while (ch!='n');
 
 cout << endl; system("pause"); return 0;
 }

@@ -27,18 +27,9 @@ if (N > 100 || N <= 0 || i==j || i<=0 || j<=0 || N < i || N < j)
   cout << "Error" << endl;
 else
 {
-  if (i < j)
-  {
-    a = N - abs(i - j) - 1;
-    cout << "a=" << a << endl;
-  }
-  else
-  {
-    a = N - abs(j - i) - 1;
-    cout << "a=" << a << endl;
-  }
-b = abs(i - j) - 1;
-cout << "b=" << b << endl;
+  a = N - abs(i - j) - 1;
+  b = abs(i - j) - 1;
+ 
 (a < b) ? cout << "\nOtvet:" << a : cout << "\nOtvet:" << b << endl;
 }
 cout << endl; system("pause"); return 0;

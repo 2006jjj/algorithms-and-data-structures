@@ -11,7 +11,7 @@ int findmax(int *);
 int main()
 {setlocale(LC_ALL, ".1251"); system("color 0F"); srand(time(NULL));
 
-int array[MAX] = { 1,2,1,6,3,1 };
+int array[MAX] = { -1,-2,-1,-6,-3,1 };
 cout<<findmax(array);
 
 cout << endl; system("pause"); return 0;

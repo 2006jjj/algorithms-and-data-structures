@@ -30,7 +30,6 @@ int findx(int* array, const int MAX)
 			ans = array[j];
 			flag = true;
 		}
-
 	}
 	cout << "Ответ:";
 	return ans;

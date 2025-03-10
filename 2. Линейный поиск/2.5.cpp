@@ -20,17 +20,17 @@ cout << endl; system("pause"); return 0;
 
 int findx(int* array, const int MAX)
 {
-	int ans = -1;
-	bool flag = false;
-	for (int j = 0; j < MAX; j++)
-	{
-		if (array[j] % 2 == 0 && (flag == false || array[j] < ans))
-		//if (array[j] % 2 != 0 && (flag == false || array[j] > ans))  //нечетные, > - поиск максимального , < - поиск минимального
-		{
-			ans = array[j];
-			flag = true;
-		}
-	}
-	cout << "Ответ:";
-	return ans;
+  int ans = -1;
+  bool flag = false;
+  for (int j = 0; j < MAX; j++)
+  {
+    if (array[j] % 2 == 0 && (flag == false || array[j] < ans))
+  //if (array[j] % 2 != 0 && (flag == false || array[j] > ans))  //нечетные, > - поиск максимального , < - поиск минимального
+    {
+      ans = array[j];
+      flag = true;
+    }
+  }
+  cout << "Ответ:";
+  return ans;
 }

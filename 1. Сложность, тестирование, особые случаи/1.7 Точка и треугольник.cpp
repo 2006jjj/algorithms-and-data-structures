@@ -90,7 +90,7 @@ else
       b = (x - d) * (x - d) + y * y;
       c = x * x + (y - d) * (y - d);
       cout << "\na=" << a << "\nb=" << b << "\nc=" << c << endl;
-      ((a <= b) ? ((a <= c) ? cout << "1" : ((b <= c) ? cout << "2" : cout << "3")) : cout<<"2");
+      ((a <= b && a <= c) ? cout<<"1" : (b <= c) ? cout<<"2" : cout<<"3");
     }
 }
 }

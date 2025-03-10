@@ -5,7 +5,7 @@
 #include <iostream> 
 using namespace std;
 
-int findx(int[], int);
+int findx(int[], unsigned int);
 const int MAX = 6;
 
 int main()
@@ -21,7 +21,7 @@ cout << endl; system("pause"); return 0;
 }
 
 
-int findx(int array[], int x)
+int findx(int array[], unsigned int x)
 {
   int ans = -1;
   char ch;

@@ -11,7 +11,7 @@ pair<int,int> findTWOmax(int *, const int);
 int main()
 {setlocale(LC_ALL, ".1251"); system("color 0F"); srand(time(NULL));
 
-int array[MAX] = { 1, 2, 33, -4, 53, 66, 77, -5 };
+int array[] = { 1, 2, 33, -4, 53, 66, 77, -5 };
 const int MAX = sizeof(array)/sizeof(array[0]);
 auto p = findTWOmax(array, MAX);
 cout << "Первый максимум:" << p.first << "\nВторой максимум:" << p.second << endl;

@@ -81,10 +81,10 @@ else
 
 
     // мой пример
-		int a, b, c;
-		if (x >= 0 && y >= 0 && y <= d - x)
+    int a, b, c;
+    if (x >= 0 && y >= 0 && y <= d - x)
       cout << "0 " << endl;
-		else
+    else
     {
       a = x * x + y * y;
       b = (x - d) * (x - d) + y * y;
@@ -92,7 +92,7 @@ else
       cout << "\na=" << a << "\nb=" << b << "\nc=" << c << endl;
       ((a <= b) ? ((a <= c) ? cout << "1" : ((b <= c) ? cout << "2" : cout << "3")) : cout<<"2");
     }
-	}
+}
 }
 cout << endl; system("pause"); return 0;
 }

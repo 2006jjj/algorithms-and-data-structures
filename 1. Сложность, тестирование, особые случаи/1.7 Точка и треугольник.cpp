@@ -57,30 +57,6 @@ else
     cout << "Error" << endl;
   else
   {
-		/* это пример человека
-      if (x >= 0 && y >= 0 && y <= d - x)
-      cout << "0 ";
-      else
-      {
-      int mn = x * x + y * y;
-      int nmin = 1;
-      int a = x * x + (y - d) * (y - d);
-      if (a < mn)
-      {
-        mn = a;
-        nmin = 2;
-        a = (x - d) * (x - d) + y * y;
-      }
-      if (a < mn)
-      {
-        //mn=a;
-        nmin = 3;
-      }
-      cout << nmin;
-		}*/
-
-
-    // мой пример
     int a, b, c;
     if (x >= 0 && y >= 0 && y <= d - x)
       cout << "0 " << endl;
@@ -89,10 +65,10 @@ else
       a = x * x + y * y;
       b = (x - d) * (x - d) + y * y;
       c = x * x + (y - d) * (y - d);
-      cout << "\na=" << a << "\nb=" << b << "\nc=" << c << endl;
+      //cout << "\na=" << a << "\nb=" << b << "\nc=" << c << endl;
       ((a <= b && a <= c) ? cout<<"1" : (b <= c) ? cout<<"2" : cout<<"3");
     }
-}
+  }
 }
 cout << endl; system("pause"); return 0;
 }

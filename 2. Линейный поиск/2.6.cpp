@@ -2,7 +2,8 @@
 Дана последовательность слов
 Вывести все самые короткие слова через пробел.*/
 
-#include <iostream> 
+#include <iostream>
+#include <string> 
 using namespace std;
 
 string findshortword(string* array, const int);

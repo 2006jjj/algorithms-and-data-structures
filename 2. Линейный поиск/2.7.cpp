@@ -22,7 +22,7 @@ cout<<findwater(array, MAX);
 cout << endl; system("pause"); return 0;
 }
 
-int findx(int* array, const int MAX)
+int findwater(int* array, const int MAX)
 {
 	int maxpos = 0;
 	for (int j = 1; j < MAX; j++)

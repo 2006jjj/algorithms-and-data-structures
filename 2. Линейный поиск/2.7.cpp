@@ -9,7 +9,7 @@
 #include <iostream> 
 usingnamespace std;
 
-int findx(int* array, const int);
+int findwater(int* array, const int);
 
 int main()
 {setlocale(LC_ALL, ".1251"); system("color 0F"); srand(time(NULL));
@@ -17,7 +17,7 @@ int main()
 int array[] = { 3, 1, 4, 3, 5, 4, 6, 1, 1, 3, 1 };
 const int MAX = sizeof(array) / sizeof(array[0]);
 
-cout<<findx(array, MAX);
+cout<<findwater(array, MAX);
 
 cout << endl; system("pause"); return 0;
 }
@@ -27,16 +27,13 @@ int findx(int* array, const int MAX)
 	int maxpos = 0;
 	for (int j = 1; j < MAX; j++)
 	{
-		if (array[j] > maxpos)
+		if (array[j] > array[maxpos])
 			maxpos = j;
 	}
-
-	cout << "maxpos=" << maxpos << endl;
-	cout << array[maxpos] << endl;
+	//cout << "maxpos=" << maxpos << endl;
 
 	int ans = 0;
 	int nowmax = 0;
-
 	for (int j = 0; j < maxpos; j++)
 	{
 		if (array[j] > nowmax)

@@ -26,7 +26,7 @@ cout << endl; system("pause"); return 0;
 
 string easypeasy(string &s)
 {
-	string ans, ch;
+	string ans;
 	const int MAX = s.size();
 	char lastsym = s[0];
 	int lastpos = 0;
@@ -40,8 +40,7 @@ string easypeasy(string &s)
 			lastpos = j;
 		}
 	}
-	ans.append(pack(s[lastpos], MAX - lastpos));
-	return ans;
+	return ans.append(pack(s[lastpos], MAX - lastpos));
 }
 
 string pack(char s, int count)

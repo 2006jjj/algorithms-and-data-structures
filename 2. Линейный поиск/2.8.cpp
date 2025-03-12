@@ -40,7 +40,16 @@ string easypeasy(string &s)
 			lastpos = j;
 		}
 	}
-	return ans.append(pack(s[lastpos], MAX - lastpos));
+	/*работает корректно
+	cout << "\nhello" << endl;
+	return ans.append(pack(s[lastpos], MAX - lastpos));*/
+	
+
+	//cout << "\nlastsym=" << lastsym;
+	//cout << "\ns[lastpos]=" << s[lastpos] << endl;
+	/*появляется мусор
+	cout << "hello" << endl;
+	return ans.append(pack(lastsym, MAX - lastpos));*/
 }
 
 string pack(char s, int count)

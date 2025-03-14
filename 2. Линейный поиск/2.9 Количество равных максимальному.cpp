@@ -28,7 +28,7 @@ using namespace std;
 int main()
 {setlocale(LC_ALL, ".1251"); system("color 0F"); srand(time(NULL));
 
-const int MAX = 10000;
+const int MAX = 10001;
 int array[MAX]{}, i, count = 0;
 
 for (int j = 0; j < MAX; j++)
@@ -42,15 +42,16 @@ int maxnumber=0, finalcount = 0;
 for (int j = 0; array[j] !=0 ; j++)
 {
 	if (array[j] > maxnumber)
+	{
 		maxnumber = array[j];
+		finalcount = 0;
+	}
+	if (array[j] == maxnumber)
+		finalcount++;
+	
 	cout << array[j] << " ";
 }
 cout << "\nmaxnumber="<<maxnumber << endl;
-for (int j = 0; array[j] != 0; j++)
-{
-	if (array[j] == maxnumber)
-		finalcount++;
-}
 cout << "\nОтвет:" << finalcount << endl;
 
 cout << endl; system("pause"); return 0;

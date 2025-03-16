@@ -31,9 +31,9 @@ int main()
 
 cout << findcountmaxnumber() << endl;
 
-
 cout << endl; system("pause");return 0;
 }
+
 int findcountmaxnumber()
 {
 	const int MAX = 10001;
@@ -57,7 +57,6 @@ int findcountmaxnumber()
 		}
 		if (array[j] == maxnumber)
 			finalcount++;
-
 		cout << array[j] << " ";
 	}
 	cout << "\nmaxnumber=" << maxnumber << endl;

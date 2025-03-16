@@ -28,16 +28,16 @@ int main()
 
 string str;
 getline(cin, str);
-cout<<countugriks(str);
+cout<<"Ответ:"<<countugriks(str);
 
 cout << endl; system("pause");return 0;
 }
 
 int countugriks(string &str)
 {
-	int strsize = str.size()/2;
+	int strsize = str.size();
 	int res=0;
-	for (int j = 0; j < strsize; j++)
+	for (int j = 0; j < strsize/2; j++)
 	{
 		char ch;
 		if (str[j] != str[strsize - j - 1])

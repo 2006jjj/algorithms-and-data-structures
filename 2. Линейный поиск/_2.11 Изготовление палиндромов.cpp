@@ -22,6 +22,11 @@
 Ввод: cognitive
 Вывод: 4  */
 
+
+#include <iostream> 
+#include <string> 
+using namespace std;
+
 int countugriks(string&);
 int main()
 {setlocale(LC_ALL, ".1251"); std::system("color 0F"); srand(time(NULL));

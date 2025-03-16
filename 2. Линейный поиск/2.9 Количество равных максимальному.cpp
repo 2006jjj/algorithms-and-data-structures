@@ -25,34 +25,41 @@
 #include <iostream> 
 using namespace std;
 
+int findcountmaxnumber();
 int main()
-{setlocale(LC_ALL, ".1251"); system("color 0F"); srand(time(NULL));
+{setlocale(LC_ALL, ".1251"); std::system("color 0F"); srand(time(NULL));
 
-const int MAX = 10001;
-int array[MAX]{}, i, count = 0;
+cout << findcountmaxnumber() << endl;
 
-for (int j = 0; j < MAX; j++)
-{
-	cin >> i;
-	array[j] = i;
-	if (array[j] == 0)
-		break;
+
+cout << endl; system("pause");return 0;
 }
-int maxnumber=0, finalcount = 0;
-for (int j = 0; array[j] !=0 ; j++)
+int findcountmaxnumber()
 {
-	if (array[j] > maxnumber)
+	const int MAX = 10001;
+	int array[MAX]{}, i;
+
+	for (int j = 0; j < MAX; j++)
 	{
-		maxnumber = array[j];
-		finalcount = 0;
+		cin >> i;
+		array[j] = i;
+		if (array[j] == 0)
+			break;
 	}
-	if (array[j] == maxnumber)
-		finalcount++;
 	
-	cout << array[j] << " ";
-}
-cout << "\nmaxnumber="<<maxnumber << endl;
-cout << "\nОтвет:" << finalcount << endl;
+	int maxnumber = 0, finalcount = 0;
+	for (int j = 0; array[j] != 0; j++)
+	{
+		if (array[j] > maxnumber)
+		{
+			maxnumber = array[j];
+			finalcount = 0;
+		}
+		if (array[j] == maxnumber)
+			finalcount++;
 
-cout << endl; system("pause"); return 0;
+		cout << array[j] << " ";
+	}
+	cout << "\nmaxnumber=" << maxnumber << endl;
+	return finalcount;
 }

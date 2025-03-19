@@ -65,11 +65,11 @@ for (int j = 0; j < K; j++)
 		break;
 	}
 }
+
 if (res[0] == (L / 2))
 	count = 1;
  
 cout <<"\nОтвет:";
-
 for (int j = 0; j < count; j++)
 	cout << res[j] << ' ';
 

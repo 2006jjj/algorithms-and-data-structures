@@ -43,7 +43,7 @@ int main()
  
 const int MAX = 10000;
 int array[MAX], res[2];
-int L, K, i, count=0;
+int L, K, i, count=2;
 cout << "Введите длину лавочки и количество ножек:" << endl;
 cin >> L >> K;
 cout << "Длина лавочки:" << L << "\nКоличество ножек:" << K << endl;
@@ -54,14 +54,10 @@ for (int j = 0; j < K; j++)
 for (int j = 0; j < K; j++)
 {
 	if (array[j] <= (L - 1)/ 2)
-	{
 		res[0] = array[j];
-		count = 1;
-	}
 	else
 	{
 		res[1] = array[j];
-		count = 2;
 		break;
 	}
 }

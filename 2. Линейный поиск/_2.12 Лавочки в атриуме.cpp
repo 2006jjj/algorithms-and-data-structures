@@ -33,7 +33,7 @@
 Ввод:
 14 6
 1 6 8 11 12 13
-Вывод:6 8  */
+Вывод: 6 8  */
 
 #include <iostream> 
 using namespace std;
@@ -68,7 +68,7 @@ for (int j = 0; j < K; j++)
 if (res[0] == (L / 2))
 	count = 1;
  
-cout << endl;
+cout <<"\nОтвет:";
 
 for (int j = 0; j < count; j++)
 	cout << res[j] << ' ';

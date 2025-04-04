@@ -38,3 +38,88 @@ AAABC1
 Вывод: 
 A143BC
 C143AB*/
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include <unordered_set>
+#include <algorithm>
+using namespace std;
+
+bool CheckCarNumbers(unordered_set<char>&, const string&);
+
+int main()
+{
+	setlocale(LC_ALL, ".1251"); system("color 0F"); srand(time(NULL));
+
+	int M, N;
+  //Создание вектора с неупорядоченными символьными множествами (показания свидетелей)
+	cin >> M;
+	vector<unordered_set<char>> indications;
+	for (int i = 0; i < M; i++)
+	{
+		unordered_set<char> symbols;
+		string str;
+		cin >> str;
+		for (const char& c : str)
+			symbols.insert(c);
+		indications.push_back(symbols);
+	}
+
+  //Создание вектора с номерами машин
+	cin >> N;
+	vector<string> car_numbers(N);
+	for (int i = 0; i < N; i++)
+	{
+		string str;
+		cin >> str;
+		car_numbers[i] = str;
+	}
+  
+	/*cout << endl;
+	for (unordered_set<char>& x : indications)
+	{
+		for (const char& c : x)
+			cout << c << " ";
+		cout << endl;
+	}
+	cout << endl;
+	for (const string& s : car_numbers)
+		cout << s << endl;*/
+
+  //Создание вектора с количеством совпадений, функция CheckCarNumbers правильно подсчитывает количество свидетелей, с которыми согласуется каждый номер
+	vector<int> matchCounts(N, 0);
+	for (int i = 0; i < N; i++)
+	{
+		for (unordered_set<char>& x : indications)
+		{
+			if (CheckCarNumbers(x, car_numbers[i]))
+				matchCounts[i]++;
+		}
+	}
+
+	//for (int n : matchCounts) cout << n << ' ';
+
+  //Поиск максимального количества совпадений
+	int maxcount = *max_element(matchCounts.begin(), matchCounts.end());
+	//cout << "\nMaxCount=" << maxcount << endl;
+
+  //Ответ
+	for (int i = 0; i < N; i++)
+	{
+		if (matchCounts[i] == maxcounts)
+			cout << car_numbers[i] << endl;
+	}
+  
+cout << endl; system("pause"); return 0;
+}
+
+bool CheckCarNumbers(unordered_set<char> &x, const string &str)
+{
+	for (const char &c : x)
+	{
+		if (str.find(c) == string::npos)
+			return false;
+	}
+	return true;
+}

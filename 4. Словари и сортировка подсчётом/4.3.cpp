@@ -6,7 +6,7 @@
 #include <iostream> 
 #include <vector>
 #include <unordered_map>
-usingnamespace std;
+using namespace std;
 
 int count_beating_rooks(vector<pair<int, int>>&);
 void add_rook(unordered_map<int, int>&, int);

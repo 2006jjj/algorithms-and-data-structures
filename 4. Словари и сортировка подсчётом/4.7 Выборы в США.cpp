@@ -52,21 +52,20 @@ bur 1*/
 #include <map>
 using namespace std;
 
-void Election_USA();
+void Election_USA(map<string, int>&);
 
 int main()
 {setlocale(LC_ALL, ".1251"); system("color 0F"); srand(time(NULL)); ios::sync_with_stdio(false); cin.tie(nullptr);
 
-Election_USA();
+map<string, int> mainmap;
+Election_USA(mainmap);
 
 cout << endl;  system("pause"); return 0;
 }
 
-void Election_USA()
+void Election_USA(map<string, int>& mainmap)
 {
-	map<string, int> mainmap;
 	string input;
-
 	while (true)
 	{
 		string key;

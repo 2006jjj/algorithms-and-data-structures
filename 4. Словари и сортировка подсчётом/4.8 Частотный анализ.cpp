@@ -91,7 +91,6 @@ void MakeMap(map<string, int>& mainmap)
 	while (true)
 	{
 		getline(cin, input);
-
 		if (input.empty()) 
 			break;
 	

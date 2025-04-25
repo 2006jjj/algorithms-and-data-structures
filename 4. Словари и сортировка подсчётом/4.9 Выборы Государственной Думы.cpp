@@ -61,6 +61,7 @@ struct Party
 	long long votes;
 	int seats, pos;
 	float fractionalPart;
+	Party():name(" "), votes(0), seats(0), pos(0), fractionalPart(0.0f) {}
 };
 
 long long VectorFilling(vector<Party>&);

@@ -13,7 +13,8 @@ int main()
 const int N = 6;
 int nums[N]{5,3,8,1,4,6};
 
-for (const auto& n : nums) cout << n << " ";
+for (const auto& n : nums) 
+	cout << n << " ";
 cout << endl;
 
 int *prefixsum = makeprefixsum(nums, N);

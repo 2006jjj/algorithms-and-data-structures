@@ -14,9 +14,9 @@ int main()
 {setlocale(LC_ALL, ".1251"); system("color 0F"); srand(time(NULL)); ios::sync_with_stdio(false); cin.tie(nullptr);
 
 int N, K;
-cout << "Введите общее количество задач для достижения цели:";
+cout << "Введите общее количество задач для достижения цели:"<<endl;
 cin >> N;
-cout << "Введите количество задач которые Юра решил за один день:";
+cout << "Введите количество задач которые Юра решил за один день:"<<endl;
 cin >> K;
 
 int result = lbinsearch(0, N, N, K);

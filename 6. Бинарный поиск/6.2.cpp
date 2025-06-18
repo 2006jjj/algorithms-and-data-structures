@@ -8,7 +8,7 @@
 using namespace std;
 
 int lbinsearch(int, int, int, int);
-bool checkendowment(int, int, int);
+bool check(int, int, int);
 
 int main()
 {setlocale(LC_ALL, ".1251"); system("color 0F"); srand(time(NULL)); ios::sync_with_stdio(false); cin.tie(nullptr);
@@ -30,7 +30,7 @@ int lbinsearch(int left, int right, int n, int k)
 	while (left < right)
 	{
 		int mid = (left + right) / 2;
-		if (checkendowment(mid, n, k))
+		if (check(mid, n, k))
 			right = mid;
 		else
 			left = mid + 1;
@@ -38,7 +38,7 @@ int lbinsearch(int left, int right, int n, int k)
 	return left;
 }
 
-bool checkendowment(int days, int n, int k) 
+bool check(int days, int n, int k) 
 {
 	return (k+(k+days-1)) * days / 2 >= n;
 }

@@ -8,6 +8,7 @@
 using namespace std;
 
 int lbinsearch(int, int, int, int);
+bool check(int, int, int);
 
 int main()
 {setlocale(LC_ALL, ".1251"); system("color 0F"); srand(time(NULL)); ios::sync_with_stdio(false); cin.tie(nullptr);
@@ -29,7 +30,7 @@ int lbinsearch(int left, int right, int n, int k)
 	while (left < right)
 	{
 		int mid = (left + right) / 2;
-		if ((k + mid) * 3 >= n + mid)
+		if (check(mid, n, k))
 		{
 			right = mid;
 		}
@@ -37,4 +38,9 @@ int lbinsearch(int left, int right, int n, int k)
 			left = mid + 1;
 	}
 	return left;
+}
+
+bool check(int mid, int n, int k) 
+{
+	return (k + mid) * 3 >= n + mid;
 }

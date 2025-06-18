@@ -31,9 +31,7 @@ int lbinsearch(int left, int right, int n, int k)
 	{
 		int mid = (left + right) / 2;
 		if (check(mid, n, k))
-		{
 			right = mid;
-		}
 		else
 			left = mid + 1;
 	}
